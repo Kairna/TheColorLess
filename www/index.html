@@ -21,25 +21,47 @@
 
     <!-- your app's js -->
   </head>
-  <body ng-app="todo">
-    <ion-side-menus>
+  <body ng-app="starter">
+    	<ion-side-menus>
+  	<!--the header -->
+	<ion-header-bar align-title="center" class="bar-assertive">
+		<h1 class="title">TheColorLess</h1>
+		<div class="buttons">
+		        <button class="button icon ion-navicon" ng-click="openPopover($event)" ></button>
+		</div>
 
-        <!-- Center content -->
-	    <ion-side-menu-content>
-	          <ion-header-bar class="bar-dark">
-		          <h1 class="title">Todo</h1>
+		  <script id="my-popover.html" type="text/ng-template">
+		 	<ion-popover-view>
+		       		<ion-header-bar>
+			     		 <h1 class="title">My Popover Title</h1>
 			        </ion-header-bar>
 				      <ion-content>
-				            </ion-content>
-					        </ion-side-menu-content>
+				            Hello!
+					        </ion-content>
+						  </ion-popover-view>
+						  </script>
+	</ion-header-bar>
+	<!-- This contain the view -->
+	<!-- Center content -->
+	<ion-side-menu-content>
+		<ion-content>
+			 <h1 class="title">Todo</h1>
+			 <h1 class="title">Todo</h1>
+		</ion-content>
+	</ion-side-menu-content>
 
-						    <!-- Left menu -->
-						        <ion-side-menu side="left">
-							      <ion-header-bar class="bar-dark">
-							              <h1 class="title">Projects</h1>
-								            </ion-header-bar>
-									        </ion-side-menu>
+	 <!-- right  menu -->
+	 <ion-side-menu side="right">
+	 	<ion-content>
+			<ion-list>
+	   			<ion-item > Numbas </ion-item>
+				<ion-item > Is 	</ion-item>
+				<ion-item > My </ion-item>
+				<ion-item > Waifu </ion-item>
+			</ion-list>
+		</ion-content>
+     	 </ion-side-menu>
 
-										  </ion-side-menus>
-										  </body>
+  	</ion-side-menus>
+ 	</body>
  </html>
