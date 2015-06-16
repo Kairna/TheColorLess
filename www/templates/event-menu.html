@@ -1,7 +1,7 @@
-<ion-side-menus enable-menu-with-back-views="false">
+<ion-side-menus enable-menu-with-back-views="false" >
 
     <!-- this is the main menu -->
-    <ion-side-menu-content>
+    <ion-side-menu-content edge-drag-threshold="true" >
         <ion-nav-bar class="bar-positive">
             <ion-nav-back-button>
             </ion-nav-back-button>
@@ -23,6 +23,7 @@
         <ion-content>
             <ul class="list">
                 <!-- Note each link has the 'menu-close' attribute so the menu auto closes when clicking on one of these links -->
+                <a href="#/main/home" class="item" menu-close> Home</a>
                 <a href="#/main/check-in" class="item" menu-close>Check-in</a>
                 <a href="#/main/attendees" class="item" menu-close>Attendees</a>
             </ul>

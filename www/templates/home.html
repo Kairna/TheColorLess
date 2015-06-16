@@ -1,24 +1,19 @@
 <ion-view view-title="123-456-7890">
-
+<!--->
             <ion-tabs class="tabs-striped tabs-top tabs-icon-only">
 
-                <ion-tab title="Home" icon-on="ion-ios-filing" icon-off="ion-ios-filing-outline">
+                <ion-tab title="Thread" icon-on="ion-ios-home" icon-off="ion-ios-home-outline">
+                    <ui-view name="tab-1"></ui-view>
+
+                <ion-tab title="Chat" icon-on="ion-edit" icon-off="ion-edit">
                     <ion-view>
                         <ion-content padding="true">
-                            <h2>Thread here</h2>
+                            <h2> up here</h2>
                         </ion-content>
                     </ion-view>
                 </ion-tab>
 
-                <ion-tab title="About" icon-on="ion-ios-clock" icon-off="ion-ios-clock-outline">
-                    <ion-view>
-                        <ion-content padding="true">
-                            <h2> Chat here</h2>
-                        </ion-content>
-                    </ion-view>
-                </ion-tab>
-
-                <ion-tab title="Settings" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline">
+                <ion-tab title="PM" icon-on="ion-paper-airplane" icon-off="ion-paper-airplane">
                     <ion-view>
                         <ion-content padding="true">
                             <h2>PM here</h2>
@@ -28,6 +23,7 @@
                 </ion-tab>
 
             </ion-tabs>
+
 
 
 
