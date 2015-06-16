@@ -3,12 +3,12 @@ angular.module('ionicApp', ['ionic'])
     .config(function($stateProvider, $urlRouterProvider) {
 
         $stateProvider
-            .state('eventmenu', {
+            .state('main', {
                 url: "/event",
                 abstract: true,
                 templateUrl: "templates/event-menu.html"
             })
-            .state('eventmenu.home', {
+            .state('main.home', {
                 url: "/home",
                 views: {
                     'menuContent' :{
@@ -16,7 +16,7 @@ angular.module('ionicApp', ['ionic'])
                     }
                 }
             })
-            .state('eventmenu.checkin', {
+            .state('main.checkin', {
                 url: "/check-in",
                 views: {
                     'menuContent' :{
@@ -25,7 +25,7 @@ angular.module('ionicApp', ['ionic'])
                     }
                 }
             })
-            .state('eventmenu.attendees', {
+            .state('main.attendees', {
                 url: "/attendees",
                 views: {
                     'menuContent' :{
