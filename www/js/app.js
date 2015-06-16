@@ -3,8 +3,19 @@ angular.module('ionicApp', ['ionic'])
     .config(function($stateProvider, $urlRouterProvider) {
 
         $stateProvider
+
+
+         //   first state is sign in
+
+            .state('signin',{
+                url: "/sign-in",
+                templateUrl:'templates/sign-in.html',
+                controller:'SignInCtrl'
+            })
+
+            // TODO
             .state('main', {
-                url: "/event",
+                url: "/main",
                 abstract: true,
                 templateUrl: "templates/event-menu.html"
             })
@@ -35,8 +46,31 @@ angular.module('ionicApp', ['ionic'])
                 }
             })
 
-        $urlRouterProvider.otherwise("/event/home");
+        $urlRouterProvider.otherwise("/sign-in");
     })
+
+
+    .controller('SignInCtrl', function($scope, $state) {
+        $scope.signIn = function(user) {
+            console.log('Sign-In', user);
+            $state.go('main.home');
+        };
+    })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .controller('MainCtrl', function($scope, $ionicSideMenuDelegate) {
         $scope.attendees = [
