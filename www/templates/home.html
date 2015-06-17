@@ -1,29 +1,19 @@
-<ion-view view-title="123-456-7890">
-<!--->
-            <ion-tabs class="tabs-striped tabs-top tabs-icon-only">
+<ion-view>
 
-                <ion-tab title="Thread" icon-on="ion-ios-home" icon-off="ion-ios-home-outline">
-                    <ui-view name="tab-1"></ui-view>
+    <ion-tabs class="tabs-striped tabs-top tabs-icon-only has-header" >
 
-                <ion-tab title="Chat" icon-on="ion-edit" icon-off="ion-edit">
-                    <ion-view>
-                        <ion-content padding="true">
-                            <h2> up here</h2>
-                        </ion-content>
-                    </ion-view>
-                </ion-tab>
+        <ion-tab title="Thread" icon-on="ion-ios-home" icon-off="ion-ios-home-outline" href="#/main/home/threadtab">
+            <ion-nav-view name="thread-tab" class="has-subheader"></ion-nav-view>
+        </ion-tab>
 
-                <ion-tab title="PM" icon-on="ion-paper-airplane" icon-off="ion-paper-airplane">
-                    <ion-view>
-                        <ion-content padding="true">
-                            <h2>PM here</h2>
-                        </ion-content>
-                    </ion-view>
-                    something 3
-                </ion-tab>
+        <ion-tab title="Chat" icon-on="ion-edit" icon-off="ion-edit" href="#/main/home/chattab">
+            <ion-nav-view name="chat-tab"  class="has-subheader"></ion-nav-view>
+        </ion-tab>
 
-            </ion-tabs>
-
+        <ion-tab title="PM" icon-on="ion-paper-airplane" icon-off="ion-paper-airplane" href="#/main/home/pmtab">
+            <ion-nav-view name="pm-tab"  class="has-subheader"></ion-nav-view>
+        </ion-tab>
+    </ion-tabs>
 
 
 

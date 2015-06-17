@@ -1,18 +1,32 @@
-<ion-side-menus enable-menu-with-back-views="false" >
+<ion-side-menus enable-menu-with-back-views="false" title="hello">
 
     <!-- this is the main menu -->
-    <ion-side-menu-content edge-drag-threshold="true" >
-        <ion-nav-bar class="bar-positive">
-            <ion-nav-back-button>
-            </ion-nav-back-button>
+    <ion-side-menu-content edge-drag-threshold="true">
+        <ion-nav-bar id="navigationBar" class="bar-dark" >
 
-            <ion-nav-buttons side="right">
-                <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+
+            <!-- Notification Section -->
+            <ion-nav-buttons side="left">
+
+                <div class="bar row">
+                    <button class="button icon-center button-energized button-outline col col-10"  >
+                        icon
+                    </button>
+                    <button class="button icon-center  button-outline col col-80"  >
+                        name/notification
+                    </button>
+                    <!--
+                   --><button menu-toggle="right" class="button icon-center button-energized button-outline col col-10" >
+                    menu
                 </button>
+                </div>
+
             </ion-nav-buttons>
+
+
         </ion-nav-bar>
 
-        <ion-nav-view name="menuContent"></ion-nav-view>
+        <ion-nav-view name="menuContent" ></ion-nav-view>
     </ion-side-menu-content>
 
     <!-- this is menu to the right -->
@@ -24,8 +38,7 @@
             <ul class="list">
                 <!-- Note each link has the 'menu-close' attribute so the menu auto closes when clicking on one of these links -->
                 <a href="#/main/home" class="item" menu-close> Home</a>
-                <a href="#/main/check-in" class="item" menu-close>Check-in</a>
-                <a href="#/main/attendees" class="item" menu-close>Attendees</a>
+
             </ul>
         </ion-content>
     </ion-side-menu>

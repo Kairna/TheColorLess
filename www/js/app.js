@@ -31,26 +31,37 @@ angular.module('ionicApp', ['ionic'])
                 }
             })
 
+            .state('main.home.chattab', {
+                url: "/chattab",
+                views: {
+                    'chat-tab' :{
+                        templateUrl: "templates/chat-tab.html",
+                        controller: "MainCtrl"
+                    }
+                }
+            })
+            .state('main.home.threadtab', {
+                url: "/threadtab",
+                views: {
+                    'thread-tab' :{
+                        templateUrl: "templates/thread-tab.html",
+                        controller: "MainCtrl"
+                    }
+                }
+            })
+            .state('main.home.pmtab', {
+                url: "/pmtab",
+                views: {
+                    'pm-tab' :{
+                        templateUrl: "templates/pm-tab.html",
+                        controller: "MainCtrl"
+                    }
+                }
+            })
+
+
             // TODO making more state
 
-            .state('main.checkin', {
-                url: "/check-in",
-                views: {
-                    'menuContent' :{
-                        templateUrl: "templates/check-in.html",
-                        controller: "CheckinCtrl"
-                    }
-                }
-            })
-            .state('main.attendees', {
-                url: "/attendees",
-                views: {
-                    'menuContent' :{
-                        templateUrl: "templates/attendees.html",
-                        controller: "AttendeesCtrl"
-                    }
-                }
-            })
             /** Not done yet
             .state('signout',{
                 url: "/sign-out",
@@ -80,13 +91,3 @@ angular.module('ionicApp', ['ionic'])
         };*/
     })
 
-    .controller('CheckinCtrl', function($scope) {
-
-
-    })
-
-    .controller('AttendeesCtrl', function($scope) {
-
-
-
-    });
