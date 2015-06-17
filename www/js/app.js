@@ -73,21 +73,24 @@ angular.module('ionicApp', ['ionic'])
     })
 
 
-    .controller('SignInCtrl', function($scope, $state) {
+    .controller('SignInCtrl', function($scope, $state,$ionicHistory) {
         $scope.signIn = function(user) {
             console.log('Sign-In', user);
+
+            $ionicHistory.nextViewOptions({
+                historyRoot: true
+            })
             $state.go('main.home');
         };
+
+
     })
 
 
 
-
     .controller('MainCtrl', function($scope, $ionicSideMenuDelegate) {
-
-
-       /** $scope.toogleRight = function() {
-            $ionicSideMenuDelegate.toogleRight();
-        };*/
+      $scope.toogleRight = function() {
+            $ionicSideMenuDelegate.toggleRight();
+        };
     })
 
