@@ -95,3 +95,9 @@ angular.module('ionicApp', ['ionic'])
         };
     })
 
+
+    .controller('tabsCtrl', function($scope, $ionicTabsDelegate) {
+        $scope.selectTabWithIndex = function(index) {
+            $ionicTabsDelegate.select(index);
+        };
+    })
