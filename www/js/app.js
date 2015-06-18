@@ -62,10 +62,28 @@ angular.module('ionicApp', ['ionic'])
     })
 
 
-    .controller('SignInCtrl', function($scope, $state) {
+    .controller('SignInCtrl', function($scope, $state, $http) {
+
         $scope.signIn = function(user) {
-            console.log('Sign-In', user);
-            $state.go('main.home');
+            console.log('Sign-In', user.username);
+            var params = new Object();
+//----------API CALL----------------:
+            $http.post("https://guarded-oasis-2979.herokuapp.com/login", user)
+            .success(function(response, status){
+                var result = response.results;
+                if (result.success == true){
+                    console.log(result.status)
+                    $state.go('main.home');
+                }
+                else{
+                // some error trapping here :) incorrect password/incorrect username. username check takes place first
+                    console.log(result.status)
+                }
+            })
+            .error(function(error, status){
+                // internal error, no input was made
+            })
+//----------END API CALL------------:
         };
     })
 
